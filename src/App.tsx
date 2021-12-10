@@ -19,8 +19,8 @@ function App() {
   useEffect(() => {
     WebViewer(
       {
-        path: "/webviewer/lib",
-        initialDoc: "/assets/test.pdf",
+        path: "webviewer/lib",
+        initialDoc: "assets/book.pdf",
         licenseKey: "ThTZn5MlPR1UiopS0hmK",
       },
       viewer.current
@@ -47,18 +47,27 @@ function App() {
 
   const onSearch = () => {
     if (coreInstance) {
-      console.log(UIInstance.searchTextFull("Sex", { caseSensitive: true }));
+      console.log(
+        UIInstance.searchTextFull("Text Information Systems", {
+          caseSensitive: true,
+        })
+      );
     }
   };
 
   return (
-    <div className="sidebar">
-      <header className="App-header">
-        <p>This is my chrome extension</p>
-        <button onClick={onClearSearchResults}>clearSearchResults</button>
-        <button onClick={onSearch}>perform search</button>
-      </header>
-      <div className="webviewer" ref={viewer}></div>
+    <div className="container">
+      <div className="reading-title">
+        <h1>Text Information Systems</h1>
+      </div>
+      <div className="sidebar">
+        <header className="App-header">
+          <p className="extension-header">This is my chrome extension</p>
+          <button onClick={onClearSearchResults}>clearSearchResults</button>
+          <button onClick={onSearch}>perform search</button>
+        </header>
+        <div className="webviewer" ref={viewer}></div>
+      </div>
     </div>
   );
 }

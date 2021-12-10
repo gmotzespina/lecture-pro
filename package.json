@@ -34,6 +34,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "https://cat-fact.herokuapp.com/",
   "browserslist": {
     "production": [
       ">0.2%",

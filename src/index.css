@@ -1,7 +1,11 @@
 body {
-  max-width: 70%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .ItemPageLayout {
-  max-width: 70%;
+  max-width: 100%;
 }
