@@ -21,7 +21,7 @@ function App() {
       {
         path: "webviewer/lib",
         initialDoc: "assets/book.pdf",
-        licenseKey: "ThTZn5MlPR1UiopS0hmK",
+        licenseKey: "", //Add licence key here
       },
       viewer.current
     ).then((instance) => {
